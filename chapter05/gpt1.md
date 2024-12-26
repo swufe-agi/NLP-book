@@ -26,7 +26,7 @@
 输出层的嵌入和输入层的嵌入是共享的。
 
 ## 4. 总参数量
-假设Block的数量是$N$，总参数量是：
+假设Block的数量是$`N`$，总参数量是：
 
 $$(V + L + 13 \times N) \times d_{\text{model}} + 12 \times N \times d_{\text{model}}^2$$
 
