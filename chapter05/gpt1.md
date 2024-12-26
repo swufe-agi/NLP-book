@@ -12,7 +12,7 @@
 
 每个Block包括2个`LayerNorm`层，1个`MultiHeadAttention`层和2个`FeedForward`层。
 
-- `MultiHeadAttention`层的包括a）每个head中$`d_k = d_v = d_{\text{model}} / h`$，因此所有head的3个权重矩阵（`Q`、`K`和`V`）参数总共为$`3 \times d_{\text{model}} \times d_{\text{model}}`$及其偏置$`3 \times d_{\text{model}}`$；c）投影矩阵，$`hd_v = d_{\text{model}} \times d_{\text{model}}`$及其偏置$d_{\text{model}}$。合计$`4 \times d_{\text{model}}^2 + 4 \times d_{\text{model}}`$。
+- `MultiHeadAttention`层的包括a）每个head中$`d_k = d_v = d_{\text{model}} / h`$，因此所有head的3个权重矩阵（`Q`、`K`和`V`）参数总共为$`3 \times d_{\text{model}} \times d_{\text{model}}`$及其偏置$`3 \times d_{\text{model}}`$；c）投影矩阵，$`hd_v = d_{\text{model}} \times d_{\text{model}}`$及其偏置$`d_{\text{model}}`$。合计$`4 \times d_{\text{model}}^2 + 4 \times d_{\text{model}}`$。
 
 - `FeedForward`层包括两个线性变换层，每个线性变换层包括权重矩阵和偏置，合计$`8 \times d_{\text{model}}^2 + 5 \times d_{\text{model}}`$。
 
