@@ -4,18 +4,19 @@
 
 ## 教材网站
 
-- https://nlp-book.swufenlp.group/
+- <https://nlp-book.swufenlp.group/>
 
 ## 引用信息
 
 ```bibtex
-@book{zhao2024nlpbook,
-    title = {自然语言处理：大规模理论与实践},
-    publisher = {机械工业出版社},
-    year = {2024},
-    author = {赵宇，任福继，陈星延，陈中普，陈珍珠},
-    address = {成都},
-    isbn = {},
-    url = {https://swufe-agi.github.io/},
+@book{zhao2025nlpbook,
+  title = {自然语言处理：大模型理论与实践},
+  publisher = {机械工业出版社},
+  year = {2025},
+  author = {赵宇，任福继，陈星延，陈中普，陈珍珠},
+  address = {成都},
+  isbn = {978-7-111-78038-0},
+  url = {https://swufe-agi.github.io/}
 }
 ```
+
