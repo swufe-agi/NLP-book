@@ -1,6 +1,6 @@
 ## 第六章：大语言模型架构
 
-## 使用`transformers pipeline`
+### 使用`transformers pipeline`
 
 （使用BERT/GPT等模型，并理解温度采样等基本概念）
 
