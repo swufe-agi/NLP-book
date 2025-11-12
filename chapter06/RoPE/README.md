@@ -28,13 +28,13 @@ R_mR_n =
 \cos n\theta & -\sin n\theta \\
 \sin n\theta & \cos n\theta
 \end{bmatrix}
-= 
+\\ = 
 \begin{bmatrix}
 \cos (m+n)\theta & -\sin (m+n)\theta \\
 \sin (m+n)\theta & \cos (m+n)\theta
 \end{bmatrix}
 = R_{m+n}
-$$。
+$$
 
 而由于 $R_{-k}$ 是 $R_k$ 的转置矩阵，我们有：
 
@@ -50,13 +50,17 @@ $$
 - $Q_m' = R_m Q_m$
 - $K_n' = R_n K_n$
 
-因此，$Q_m'^T K_n' = (R_m Q_m)^T (R_n K_n) = Q_m^T R_m^T R_n K_n = Q_m^T R_{n-m} K_n$。
+因此，
+
+$$
+Q_m'^T K_n' = (R_m Q_m)^T (R_n K_n) = Q_m^T R_m^T R_n K_n = Q_m^T R_{n-m} K_n
+$$
 
 从上面的结果可知，只要n-m相同，无论m和n具体是多少，旋转后的查询向量和键向量的点积结果是相同的。这表明RoPE成功地将相对位置信息引入到了注意力机制中。
 
 ### 扩展到更高维度
 
-考虑通用的$d$维情况，我们可以将$d$维向量分成$d/2$个二维子空间，每个子空间应用相同的旋转矩阵。
+考虑通用的 $d$ 维情况，我们可以将 $d$ 维向量分成 $d/2$ 个二维子空间，每个子空间应用相同的旋转矩阵。
 
 $$
 R_{\Theta,m}^d =
@@ -71,4 +75,4 @@ R_{\Theta,m}^d =
 \end{pmatrix}
 $$
 
-其中，$\theta_i = 100000^{-2(i-1)/d}, i \in [1, 2, \dots, d/2]$.
+其中，$\theta_i = 100000^{-2(i-1)/d}, i \in [1, 2, \dots, d/2]$ 。
