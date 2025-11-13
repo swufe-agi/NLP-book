@@ -1,6 +1,14 @@
-## RoPE (Rotary Position Embedding)的相对位置
+---
+title: RoPE
 
-> 由于部分Latex公式在Github渲染不出，可以查看RoPE.pdf文件
+author: AGI Group
+
+date: 2025-11
+
+CJKmainfont: LXGW WenKai
+---
+
+## RoPE (Rotary Position Embedding)的相对位置
 
 RoPE（Rotary Position Embedding）是一种用于自然语言处理模型中的位置编码方法。与传统的绝对位置编码不同，RoPE通过旋转嵌入向量来表示相对位置，从而更好地捕捉序列中词语之间的相对关系。
 
@@ -21,7 +29,7 @@ $$
 由于 $\sin(a + b) = \sin a \cos b + \cos a \sin b$， $\cos(a + b) = \cos a \cos b - \sin a \sin b$，我们可以证明旋转矩阵具有以下性质：
 
 $$
-R_mR_n = 
+R_mR_n =
 \begin{bmatrix}
 \cos m\theta & -\sin m\theta \\
 \sin m\theta & \cos m\theta
@@ -30,7 +38,7 @@ R_mR_n =
 \cos n\theta & -\sin n\theta \\
 \sin n\theta & \cos n\theta
 \end{bmatrix}
-\\ = 
+\\ =
 \begin{bmatrix}
 \cos (m+n)\theta & -\sin (m+n)\theta \\
 \sin (m+n)\theta & \cos (m+n)\theta
@@ -45,8 +53,8 @@ R_m^TR_n =
 R_{-m}R_n = R_{n-m}
 $$
 
-
 ### 在Attention中的应用
+
 考虑向量$x_m$和向量$x_n$，假设$x_m$对应的查询向量是$Q_m$，$x_n$对应的键向量是$K_n$。如果应用RoPE，我们将查询向量和键向量分别旋转（考虑位置信息），即
 
 - $Q_m' = R_m Q_m$
